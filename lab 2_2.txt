@@ -1,0 +1,9 @@
+<script>var result = ""
+var i = 0
+var number = 5
+while(i < number){
+	result += x
+	i++
+	console.log(result)
+	}
+</script>
