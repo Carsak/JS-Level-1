@@ -1,0 +1,22 @@
+<script>
+	function compare(x){
+		var x = x
+		return function (y){
+			if (y > x) {
+				return true;
+			}
+			else if (y < x) {
+				return false;
+			}
+			else{
+				return null;
+			}
+		};
+	}
+
+	var x = compare(10);
+	x(9);
+	x(10);
+	x(11);
+	
+</script>

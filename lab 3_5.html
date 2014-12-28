@@ -1,0 +1,38 @@
+<script>
+/*1 4	7	10	
+2	5	8	11
+3 	6	9	12
+*/
+
+	function drawTable(number, column){
+		var result = "";
+		var maxNumberPerColumn = number / column;
+		var totalId = 1;
+		var firstNumber = 1;
+		for(var i = 0; i < maxNumberPerColumn; i++){
+			var numberInColumn = firstNumber;
+			result = result + firstNumber + addSpace();
+			
+				for(var x = 1; x < column; x++){
+					numberInColumn = numberInColumn + maxNumberPerColumn;
+					totalId++;
+					result = result + numberInColumn + addSpace();
+				}
+			firstNumber++;
+			totalId++;
+			//console.log(firstNumber)
+			
+		}
+				
+		function addSpace(){
+			if(totalId % column === 0 && totalId !== 0 ){
+				return "\n";
+			}
+			return "\t";
+			}
+		console.log(result);
+	}
+drawTable(12, 4);
+drawTable(15, 4);
+</script>
+

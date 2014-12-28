@@ -1,0 +1,30 @@
+<script>
+	var a = [5, 12];
+	var b = [];
+	a[99] = 7;
+	
+	function power1(){
+		for(var i =0 ; i < a.length; i++){
+			if(a[i]){
+				b.push(Math.pow(a[i], 2));
+			}
+		}
+		console.log(b);
+	}
+	power1();
+	
+	var a = [5, 12];
+	var b = [];
+	a[99] = 7;
+	
+	function power2(){
+		for(var key in a){
+			b.push(Math.pow(a[key], 2));
+		}
+		console.log(b);
+	}
+	
+	power2();
+
+
+</script>

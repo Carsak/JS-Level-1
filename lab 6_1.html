@@ -1,0 +1,13 @@
+<meta charset="utf-8" />
+
+<script>
+	function Book(title, publicYear, price){
+		this.title = title;
+		this.publicYear = publicYear;
+		this.price = price;
+	}
+
+	var book1 = new Book("Riki Tiki", 2011, 50);
+	book1.constructor.prototype.show = function(){console.log(this.title);console.log(this.price);}
+
+</script>

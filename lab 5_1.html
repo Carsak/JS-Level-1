@@ -1,0 +1,18 @@
+<meta charset="utf-8" /> 
+<script>
+
+	function searchInMyWord(str, txt){
+	 var pos = str.indexOf(txt);
+	 if (pos != -1){
+		var lastSpace = str.indexOf(" ", pos);
+		var firstSpace = str.lastIndexOf(" ", pos) + 1;
+		var word = str.slice(firstSpace, lastSpace);
+		return word;
+	 }
+	}
+	
+	var s = "Мы знаем, что монохромный цвет – это градации серого";
+	var txt = "хром";
+	
+	var myWord = searchInMyWord(s, txt);
+</script>

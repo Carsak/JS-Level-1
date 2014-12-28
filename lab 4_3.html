@@ -1,0 +1,15 @@
+<script>
+	var N = 20;
+	var fibs = [1, 1];
+	
+	
+	function countFibo(N){
+		for(var i=2; i < N; i++){
+			console.log(i);
+			fibs[fibs.length] = fibs[fibs.length-2] + fibs[fibs.length-1];
+		}
+		console.log(fibs);
+	}
+	
+	countFibo(N);
+</script>

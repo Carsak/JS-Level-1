@@ -1,0 +1,32 @@
+<script>
+	var book = {};
+	book.title = "Almat";
+	book.pubYear = 2014;
+	book.price = 99999;
+
+	var book2 = {
+	title: "Example", price: 5689, pubYear: 2013
+	}
+	for(var x in book){
+		console.log(x + ": " + book[x]);
+	}
+
+	for(var x in book2){
+		console.log(x + ": " + book2[x]);
+	}
+	
+	book.show = function(){
+		console.log(this.title);
+		console.log(this.price);
+	}
+	
+	function showBook(){
+		console.log(this.title);
+		console.log(this.price);
+	}
+	
+	book2.show = showBook;
+	
+	book.show();
+	book2.show();
+</script>

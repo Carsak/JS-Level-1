@@ -1,0 +1,20 @@
+<meta charset="utf-8" />
+
+<script>
+	function Dictionary(dict){
+		this.dict = dict || {};
+		this.get = function(key){
+			return this.dict[key];
+		}
+		this.set = function(key, value){
+			this.dict[key] = value;
+		}
+	}
+	
+	var users = new Dictionary({john: "admin"});
+	/*users.get("john");
+	users.set('mike', 'manager');*/
+	
+
+
+</script>

@@ -1,22 +1,24 @@
 <script>
-var allLines = 4;
+	var allLines = 4;
 
-var star = "*";
-var space = " ";
-/*var resultSpace = "";
-var resultStar = "";*/
+	var star = "*";
+	var space = " ";
+	/*var resultSpace = "";
+	var resultStar = "";*/
 
-for(var curLine = 1; curLine <= allLines; curLine++){
-	
-	for(var i = 0, resultSpace = ""; i < (allLines - curLine); i++){
-		resultSpace += space;
+	for(var curLine = 1; curLine <= allLines; curLine++){
+		
+		for(var i = 0, resultSpace = ""; i < (allLines - curLine); i++){
+		
+			resultSpace += space;
+		}
+		for(var x = (curLine * 2 - 1), resultStar = "";  x > 0; x--){
+		
+			resultStar += star;
+			/*console.log(x);*/
+		}
+		result = resultSpace + resultStar;
+		console.log(result);
 	}
-	for(var x = (curLine * 2 - 1), resultStar = "";  x > 0; x--){
-		resultStar += star;
-		/*console.log(x);*/
-	}
-	result = resultSpace + resultStar;
-	console.log(result);
-}
 
 </script>

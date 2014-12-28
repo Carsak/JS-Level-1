@@ -1,0 +1,22 @@
+<script>
+	
+function drawLines(tab, symbol, cntSymbols) {
+	
+	for(var curLine = 1; curLine <= cntSymbols; curLine++){
+		
+		for(var i = 0, resultSpace = ""; i < (cntSymbols - curLine); i++){
+		
+			resultSpace += tab;
+		}
+		for(var x = (curLine * 2 - 1), resultStar = "";  x > 0; x--){
+		
+			resultStar += symbol;
+		}
+		result = resultSpace + resultStar;
+		console.log(result);
+	}
+}
+
+drawLines(" ", "A", 7)
+	
+</script>

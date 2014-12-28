@@ -1,0 +1,33 @@
+<meta charset="utf-8" /> 
+<script>
+	function substrCount(input, needle, offset, length){
+		var s = input.slice(offset, length); //Отрезаем слово
+		var i = 0;
+		var start = 0
+		while(s.indexOf(needle, start) !== (-1)) { // s.indexOf при отсутствии соответствий возвращает -1 
+			start = s.indexOf(needle, start) + needle.length;
+			i++
+		}
+		
+		return i;
+	}
+	
+	myNumber = substrCount('Good Golly Miss Molly', 'll', 7, 10);
+		
+		/*
+		var input = 'Good Golly Miss Molly'
+		var needle = "ll";
+		var offset = 7;
+		var len = 10
+		
+		var s = input.slice(offset, len);
+		var i = 0;
+		var start = 0
+		while(s.indexOf(needle, start) !== (-1)) {
+			start = s.indexOf(needle, start) + needle.length;
+			i++;
+			console.log(start);
+		}*/
+		
+		
+</script>
